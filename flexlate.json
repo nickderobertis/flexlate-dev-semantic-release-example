@@ -11,5 +11,21 @@
       "render_relative_root_in_template": "output"
     }
   ],
-  "applied_templates": []
+  "applied_templates": [
+    {
+      "name": "copier-flexlate-dev-semantic-release",
+      "data": {
+        "author_email": "derobertis.nick@gmail.com",
+        "full_name": "Flexlate Dev Semantic Release Example",
+        "main_branch_name": "main",
+        "package_author": "Nick DeRobertis",
+        "repo_name": "flexlate-dev-semantic-release-example",
+        "repo_username": "nickderobertis",
+        "short_description": "A short description"
+      },
+      "version": "018d6bbf34555893f28292b07f57ded2",
+      "add_mode": "local",
+      "root": "."
+    }
+  ]
 }
