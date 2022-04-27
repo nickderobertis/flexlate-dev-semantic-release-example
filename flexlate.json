@@ -15,13 +15,13 @@
     {
       "name": "copier-flexlate-dev-semantic-release",
       "data": {
-        "author_email": "derobertis.nick@gmail.com",
-        "full_name": "Flexlate Dev Semantic Release Example",
-        "main_branch_name": "main",
-        "package_author": "Nick DeRobertis",
         "repo_name": "flexlate-dev-semantic-release-example",
+        "full_name": "Flexlate Dev Semantic Release Example",
         "repo_username": "nickderobertis",
-        "short_description": "A short description"
+        "short_description": "A short description",
+        "package_author": "Nick DeRobertis",
+        "author_email": "derobertis.nick@gmail.com",
+        "main_branch_name": "main"
       },
       "version": "018d6bbf34555893f28292b07f57ded2",
       "add_mode": "local",

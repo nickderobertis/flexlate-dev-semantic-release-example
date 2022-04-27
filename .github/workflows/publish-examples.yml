@@ -1,0 +1,30 @@
+name: Publish Example Repositories
+on: [push, workflow_dispatch]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    name: Publish the example repositories
+    steps:
+      - uses: actions/setup-python@v3
+      - name: Install Flexlate Dev Tools
+        run: pip install flexlate-dev
+      - name: Configure Git Committer
+        run: |
+          git config --global user.email "derobertis.nick@gmail.com"
+          git config --global user.name "Nick DeRobertis"
+      - name: Clone the template repository in the temp dir
+        run: |
+          cd "$RUNNER_TEMP"
+          gh repo clone $GITHUB_REPOSITORY
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: Publish the example repositories
+        run: |
+          gh auth setup-git
+          # Strip owner to get repository name
+          repo_name="${GITHUB_REPOSITORY##*/}"
+          cd "$RUNNER_TEMP/$repo_name"
+          dfxt publish-all -n ..
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
