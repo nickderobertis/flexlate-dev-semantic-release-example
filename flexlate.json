@@ -2,7 +2,7 @@
   "template_sources": [
     {
       "name": "copier-flexlate-dev-semantic-release",
-      "path": "../../home/runner/work/_temp/copier-flexlate-dev-semantic-release",
+      "path": "../copier-flexlate-dev-semantic-release",
       "type": "copier",
       "version": "018d6bbf34555893f28292b07f57ded2",
       "git_url": null,
