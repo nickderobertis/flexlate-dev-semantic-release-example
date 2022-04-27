@@ -1,0 +1,15 @@
+{
+  "template_sources": [
+    {
+      "name": "copier-flexlate-dev-semantic-release",
+      "path": "../../home/runner/work/_temp/copier-flexlate-dev-semantic-release",
+      "type": "copier",
+      "version": "018d6bbf34555893f28292b07f57ded2",
+      "git_url": null,
+      "target_version": null,
+      "render_relative_root_in_output": ".",
+      "render_relative_root_in_template": "output"
+    }
+  ],
+  "applied_templates": []
+}
