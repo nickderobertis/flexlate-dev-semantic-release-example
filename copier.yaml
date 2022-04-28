@@ -19,3 +19,8 @@ main_branch_name:
   type: str
   help: Name of the main branch
   default: main
+
+author:
+  type: str
+  help: Name of the primary author of the project
+  default: Nick DeRobertis
