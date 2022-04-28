@@ -11,9 +11,13 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
-repo_name:
+full_name:
   type: str
-  help: Name for the repo
+  help: Full name of the project with formatting
+
+short_description:
+  type: str
+  help: Main sentence or phrase to describe the project
 
 main_branch_name:
   type: str
