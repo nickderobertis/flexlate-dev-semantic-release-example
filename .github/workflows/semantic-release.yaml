@@ -13,6 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Configure Git Committer
+        run: |
+          git config --global user.email "derobertis.nick@gmail.com"
+          git config --global user.name "Nick DeRobertis"
       - name: Test Git access
         run: git push --dry-run --no-verify https://x-access-token:$TOKEN@github.com/nickderobertis/flexlate-dev-semantic-release-example HEAD:main
         env:
