@@ -13,8 +13,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - name: Test Git access
+        run: git push --dry-run --no-verify https://x-access-token:$TOKEN@github.com/nickderobertis/flexlate-dev-semantic-release-example HEAD:main
+        env:
+          TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.gh_token }}
-
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
