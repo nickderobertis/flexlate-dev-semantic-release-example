@@ -21,6 +21,7 @@ jobs:
           git config --global user.name "Nick DeRobertis"
           gh auth setup-git
           gh auth status
+          curl -sS -f -I -H "Authorization: token ${GH_TOKEN}" https://api.github.com | grep ^x-oauth-scopes: | cut -d' ' -f2- | tr -d "[:space:]" | tr ',' '\n'
           git ls-remote https://github.com/nickderobertis/flexlate-dev-semantic-release-example
           git push --dry-run --no-verify https://github.com/nickderobertis/flexlate-dev-semantic-release-example HEAD:main
       - name: Semantic Release
