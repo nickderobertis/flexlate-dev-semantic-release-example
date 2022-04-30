@@ -1,0 +1,23 @@
+commands: []
+data:
+  default:
+    data:
+      author: Nick DeRobertis
+      full_name: flexlate-dev-semantic-release-example-example
+      main_branch_name: main
+      short_description: An example project generated from flexlate-dev-semantic-release-example
+    folder_name: flexlate-dev-semantic-release-example-example
+run_configs:
+  default:
+    data_name: default
+    publish:
+      post_init:
+      - gh repo create --public --source=.
+      - git push origin master
+      - git push --all origin
+      post_update:
+      - fxt merge
+      - git push --all origin
+      pre_check:
+      - if [ -n "$(find . -prune -empty 2>/dev/null)" ]; then gh repo clone {{ data.folder_name
+        }} .; else git pull origin master; fi
