@@ -8,6 +8,7 @@ jobs:
   actions-tagger:
     runs-on: ubuntu-latest
     steps:
-      - uses: Actions-R-Us/actions-tagger@latest
+      - uses: Actions-R-Us/actions-tagger@v2
         with:
           publish_latest_tag: true
+          token: ${{ secrets.GH_TOKEN }}
