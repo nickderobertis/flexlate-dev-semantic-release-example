@@ -16,11 +16,15 @@ jobs:
         with:
           path: ${{ steps.repo_name.outputs.repo_name }}
       - name: Write requirements for caching
-        run: echo flexlate-dev > "$RUNNER_TEMP/publish-requirements.txt"
+        id: cache_requirements
+        run: |
+          cache_path="$RUNNER_TEMP/publish-requirements.txt"
+          echo flexlate-dev > "$cache_path"
+          echo "::set-output name=cache_path::$cache_path"
       - uses: actions/setup-python@v3
         with:
           cache: pip
-          cache-dependency-path: "$RUNNER_TEMP/publish-requirements.txt"
+          cache-dependency-path: ${{ steps.cache_requirements.outputs.cache_path }}
       - name: Install Flexlate Dev Tools
         run: pip install flexlate-dev
       - name: Configure Git Committer
