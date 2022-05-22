@@ -20,7 +20,9 @@ jobs:
           cache: pip
           cache-dependency-path: "**/publish-requirements.txt"
       - name: Install Flexlate Dev Tools
-        run: pip install -r publish-requirements.txt
+        run: pip install -r "$REPO_NAME/publish-requirements.txt"
+        env:
+          REPO_NAME: ${{ steps.repo_name.outputs.repo_name }}
       - name: Configure Git Committer
         run: |
           git config --global user.email "derobertis.nick@gmail.com"
