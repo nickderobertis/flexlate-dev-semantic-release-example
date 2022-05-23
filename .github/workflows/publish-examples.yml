@@ -1,5 +1,13 @@
 name: Publish Example Repositories
-on: [push, workflow_dispatch]
+on:
+  push:
+    branches:
+      - main
+      - alpha
+      - beta
+      - "*.*.*"
+      - "*.*"
+  workflow_dispatch:
 
 jobs:
   publish:
