@@ -2,9 +2,9 @@
   "template_sources": [
     {
       "name": "copier-flexlate-dev-semantic-release",
-      "path": "../copier-flexlate-dev-semantic-release",
+      "path": "/home/runner/work/copier-flexlate-dev-semantic-release/copier-flexlate-dev-semantic-release/copier-flexlate-dev-semantic-release",
       "type": "copier",
-      "version": "53285e947494aa6dbde75ad42ee6eda7",
+      "version": "7b585dc504f2640e9464fa646d33a508",
       "git_url": null,
       "target_version": null,
       "render_relative_root_in_output": ".",
@@ -24,7 +24,7 @@
         "main_branch_name": "main",
         "package_author": "Nick DeRobertis"
       },
-      "version": "53285e947494aa6dbde75ad42ee6eda7",
+      "version": "7b585dc504f2640e9464fa646d33a508",
       "add_mode": "local",
       "root": "."
     }
